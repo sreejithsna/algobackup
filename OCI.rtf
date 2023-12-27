@@ -1,0 +1,133 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fmodern\fcharset0 CourierNewPS-BoldMT;\f4\fmodern\fcharset0 CourierNewPSMT;\f5\fnil\fcharset0 Tahoma;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red17\green17\blue16;
+\red243\green249\blue251;\red234\green234\blue234;\red23\green23\blue23;\red247\green248\blue249;\red194\green126\blue101;
+\red23\green23\blue23;\red0\green0\blue0;\red255\green255\blue255;\red20\green19\blue17;\red255\green249\blue206;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\csgray\c0;\cssrgb\c8627\c8235\c7451;
+\cssrgb\c96078\c98039\c98824;\cssrgb\c93436\c93436\c93319;\cssrgb\c11778\c11778\c11763;\cssrgb\c97365\c97758\c98028;\cssrgb\c80784\c56863\c47059;
+\cssrgb\c11765\c11765\c11765;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c10196\c9412\c8627;\cssrgb\c100000\c97647\c84314;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh16280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 scp -i 
+\f1\fs34 \cf3 ssh-key-2023-12-15.key
+\f0\fs26 \cf2  instantclient-basic-linux.x64-19.15.0.0.0dbru-2.zip opc@
+\f2\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 144.24.147.57
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 :/home/opc\
+scp -i 
+\f1\fs34 \cf3 ssh-key-2023-12-15.key 
+\f0\fs26 \cf2 opc@
+\f2\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 144.24.147.57
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 :/home/opc\
+scp -i 
+\f1\fs34 \cf3 cwallet.sso
+\f0\fs26 \cf2  opc@140.238.255.42:/home/opc\
+\
+ssh -i 
+\f1\fs34 \cf3 ssh-key-2023-12-15.key
+\f0\fs26 \cf2  opc@
+\f2\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 144.24.147.57	
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+/etc/systemd/system\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb6 \expnd0\expndtw0\kerning0
+\CocoaLigature1 [Unit]\
+Description=My Dhan Service\
+\
+[Service]\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 WorkingDirectory=\kerning1\expnd0\expndtw0 \CocoaLigature0 /home/opc/mydhan/\cb6 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 User=opc\
+Group=opc\
+ExecStart=sh \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 /home/opc/mydhan/dhan_control.sh start\cb6 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+SyslogIdentifier=MYDHAN\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 Environment=\kerning1\expnd0\expndtw0 \CocoaLigature0 LD_LIBRARY_PATH="/home/opc/instantclient_19_15"\expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+Environment=\kerning1\expnd0\expndtw0 \CocoaLigature0 TNS_ADMIN="/home/opc/instantclient_19_15/network/admin"\
+\expnd0\expndtw0\kerning0
+\CocoaLigature1 Environment=\cb7 TERM=\cb8 xterm\
+\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb6 \
+[Install]\
+\
+WantedBy=multi-user.target\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 scp -i ssh-key-2022-06-22.key /Users/sreejithsnair/Downloads/instantclient_19_8/network/admin/cwallet.sso opc@140.238.255.42:/home/opc/instantclient_21_6/network/admin\
+	\
+scp -i ssh-key-2022-06-22.key 
+\f1\fs34 \cf3 /Users/sreejithsnair/Downloads/Wallet_SSN1/
+\f0\fs26 \cf2 cwallet.sso opc@140.238.255.42:/home/opc/\
+\
+scp -i ssh-key-2022-06-22.key 
+\f1\fs34 \cf3 /Users/sreejithsnair/Downloads/APIConnect-1.0.2.tar
+\f0\fs26 \cf2  opc@140.238.255.42:/home/opc/mydhan\
+\
+expdp userid=dhan/
+\f1\fs24 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Welcome12345#
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 @ssn1 FILE=DHAN_expdp_1402.dmp DIRECTORY=data_pump_dir\
+\
+\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f3\b\fs32 \cf11 \cb12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 SELECT
+\f4\b0  credential_name, username, comments 
+\f3\b FROM
+\f4\b0  all_credentials;\cf13 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+SELECT * FROM DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR');\
+\
+\
+begin\
+  
+\f5\fs20 \cf11 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 DBMS_CLOUD.create_credential
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 (\
+    credential_name => 'SSN_CRED1',\
+    username        => 'sreejith.sreekantan@allianz.com',\
+    password        => 'TCSDec12345#');\
+end;\
+/\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs20 \cf11 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 DBMS_CLOUD.create_credential(credential_name => 'OBJ_STORE_CRED',username => 'nkoottal', password => '12\}#mCzt8ympxD29.TG)tr');
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+Create Pre authenticated URL - Permit read and write\
+\
+BEGIN\
+   DBMS_CLOUD.PUT_OBJECT(credential_name => 'SSN_CRED1',\
+     object_uri => 'https://objectstorage.ap-mumbai-1.oraclecloud.com/p/_MmbKsQ4cZlMeDhd-jVMjbGP2THGgnkrNOb_DSkzwNWAun_LrMWKW2V9flSCBHOs/n/bmiyb53g43ha/b/bucket-20220624-1958/o/DHAN_expdp.dmp',\
+     directory_name => 'DATA_PUMP_DIR',\
+     file_name => 'DHAN_expdp_10Jul.dmp\'92);\
+    END;\
+ /\
+	\
+\
+}
